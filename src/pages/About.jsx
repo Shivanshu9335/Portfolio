@@ -67,7 +67,7 @@ const About = () => {
                   <span>
                     <b>Degree:</b>
                   </span>
-                  <p>..... </p>
+                  <p>12th only </p>
                 </td>
               </tr>
               <tr className="">
