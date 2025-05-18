@@ -10,8 +10,8 @@ const About = () => {
           About
         </h1>
         <p className="text-center mt-4 text-lg">
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          "I'm a Web-developer passionate about crafting clean,
+          responsive, and user-friendly web experiences."
         </p>
 
         <div className="w-[90%] m-auto flex gap-5   max-h-max mt-10">
@@ -20,10 +20,7 @@ const About = () => {
           </div>
           <div className="w-[65%] p-3">
             <h1 className="text-3xl font-bold ">Web Developer.</h1>
-            <i className="mt-5 font-thin">
-              orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </i>
+            
             <table className="max-h-max  leading-8  w-full m-auto mt-5 p-2">
               <tr className="">
                 <td>
