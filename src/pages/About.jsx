@@ -1,199 +1,99 @@
-import React from 'react'
+import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import image from "../assets/porfolioImage.jpg";
 
 const About = () => {
   return (
-    <div>
-      <div className="w-full max-h-max">
-        <h1 className="text-3xl font-bold text-center max-w-max m-auto h-12 w-15 border-b-4 border-b-blue-400">
+    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      {/* Section Title */}
+      <div className="max-w-3xl mx-auto text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold border-b-4 border-blue-400 inline-block">
           About
         </h1>
-        <p className="text-center mt-4 text-lg">
-          "I'm a Web-developer passionate about crafting clean,
-          responsive, and user-friendly web experiences."
+        <p className="mt-4 text-lg text-gray-700">
+          I'm a Web Developer passionate about crafting clean, responsive, and
+          user-friendly web experiences.
         </p>
+      </div>
 
-        <div className="w-[90%] m-auto flex gap-5   max-h-max mt-10">
-          <div className="w-[35%] h-[400px] overflow-hidden bg-green-400">
-            <img src={image} alt="" />
-          </div>
-          <div className="w-[65%] p-3">
-            <h1 className="text-3xl font-bold ">Web Developer.</h1>
-            
-            <table className="max-h-max  leading-8  w-full m-auto mt-5 p-2">
-              <tr className="">
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>Birthday:</b>
-                  </span>
-                  <p>22 Jan 2008 </p>
-                </td>
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>Age:</b>
-                  </span>
-                  <p>18 </p>
-                </td>
-              </tr>
-              <tr className="">
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>Website:</b>
-                  </span>
-                  <p> .......... </p>
-                </td>
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>Degree:</b>
-                  </span>
-                  <p>..... </p>
-                </td>
-              </tr>
-              <tr className="">
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>Phone:</b>
-                  </span>
-                  <p>+919335103237 </p>
-                </td>
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>Email:</b>
-                  </span>
-                  <p>shivanshuji50@gmail.com</p>
-                </td>
-              </tr>
-              <tr className="">
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>Freelance:</b>
-                  </span>
-                  <p>Available </p>
-                </td>
-                <td>
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </td>
-                <td className="flex gap-3">
-                  <span>
-                    <b>City:</b>
-                  </span>
-                  <p>Lucknow </p>
-                </td>
-              </tr>
-            </table>
+      {/* Profile & Details */}
+      <div className="mt-10 max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
+        {/* Image */}
+        <div className="w-full md:w-1/3 flex-shrink-0">
+          <img
+            src={image}
+            alt="Profile"
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
+          />
+        </div>
 
-            <p className="mt-2 font-medium font-serif text-gray-800">
-              I’m a passionate Web Developer with a focus on creating
-              responsive, user-friendly websites. I specialize in HTML, CSS,
-              JavaScript, and modern frameworks like React. I love building
-              websites that not only look great but also work smoothly on all
-              devices. I'm always learning new technologies to improve my skills
-              and deliver better digital experiences.
-            </p>
+        {/* Details */}
+        <div className="w-full md:w-2/3 space-y-6">
+          <h2 className="text-2xl font-bold text-gray-800">Web Developer</h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { label: "Birthday", value: "22 Jan 2008" },
+              { label: "Age", value: "18" },
+              { label: "Website", value: "www.example.com" },
+              { label: "Degree", value: "B.Sc. Computer Science" },
+              { label: "Phone", value: "+91 9335103237" },
+              { label: "Email", value: "shivanshuji50@gmail.com" },
+              { label: "Freelance", value: "Available" },
+              { label: "City", value: "Lucknow" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-start">
+                <IoIosArrowForward className="mt-1 text-blue-500" />
+                <div className="ml-2">
+                  <span className="font-semibold text-gray-800">
+                    {item.label}:
+                  </span>
+                  <span className="ml-1 text-gray-700">{item.value}</span>
+                </div>
+              </div>
+            ))}
           </div>
+
+          <p className="text-gray-700 leading-relaxed">
+            I’m a passionate Web Developer with a focus on creating responsive,
+            user-friendly websites. I specialize in HTML, CSS, JavaScript, and
+            modern frameworks like React. I love building websites that not only
+            look great but also work smoothly on all devices. I'm always
+            learning new technologies to improve my skills and deliver better
+            digital experiences.
+          </p>
         </div>
       </div>
 
-      <div className=" w-[90%]  m-auto max-h-max p-10 mt-10">
-        <h1 className="text-3xl font-bold text-center max-w-max m-auto h-12 w-15 border-b-4 border-b-blue-400">
+      {/* Skills Section */}
+      <div className="mt-16 max-w-5xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center border-b-4 border-blue-400 inline-block">
           Skills
-        </h1>
-        <div className="flex mt-10  justify-between">
-          <div className="w-[45%] flex flex-col gap-2">
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-700">HTML</span>
-              <span className="text-sm font-medium text-gray-700">100%</span>
+        </h2>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {[
+            { skill: "HTML", pct: 100 },
+            { skill: "CSS", pct: 90 },
+            { skill: "JavaScript", pct: 70 },
+            { skill: "React", pct: 90 },
+          ].map((item) => (
+            <div key={item.skill} className="space-y-2">
+              <div className="flex justify-between">
+                <span className="text-gray-700 font-medium">{item.skill}</span>
+                <span className="text-gray-700 font-medium">{item.pct}%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3">
+                <div
+                  className="bg-green-500 h-3 rounded-full"
+                  style={{ width: `${item.pct}%` }}
+                />
+              </div>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className="bg-green-500 h-3 rounded-full"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div className="w-[45%] flex flex-col gap-2">
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-700">CSS</span>
-              <span className="text-sm font-medium text-gray-700">90%</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className="bg-green-500 h-3 rounded-full"
-                style={{ width: "90%" }}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="flex  mt-5 justify-between">
-          <div className=" w-[45%] flex flex-col gap-2">
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-700">
-                JAVASCRIPT
-              </span>
-              <span className="text-sm font-medium text-gray-700">70%</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className="bg-green-500 h-3 rounded-full"
-                style={{ width: "70%" }}
-              />
-            </div>
-          </div>
-          <div className="w-[45%]  flex flex-col gap-2">
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-700">REACT</span>
-              <span className="text-sm font-medium text-gray-700">90%</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className="bg-green-500 h-3 rounded-full"
-                style={{ width: "90%" }}
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default About
+export default About;

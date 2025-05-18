@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import bgi from "../assets/Bgi.png";
 import { Link } from "react-router-dom";
@@ -7,33 +7,47 @@ const Home = () => {
   const el = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
+    const options = {
       strings: [
-        `HI, I'M <br /> <span class='border-b-2 border-yellow-300 text-cyan-600'>SHIVANSHU</span> <br/> I'M A <br /> WEB <span class='text-cyan-600' >DEVELOPER</span>`,
+        `HI, I'M <br /> <span class='text-cyan-600'>SHIVANSHU</span> <br/> I'M A <br /> <span class='text-cyan-600'>WEB DEVELOPER</span>`,
       ],
       typeSpeed: 100,
-      // loop: true,
-      // backSpeed: 50,
-    });
-
-    return () => {
-      typed.destroy();
+      backSpeed: 50,
+      loop: true,
+      loopCount: Infinity,
+      smartBackspace: true,
+      showCursor: true,
+      cursorChar: "|",
+      backDelay: 1000,
     };
-  }, []);
-  return (
-    <div id="Image" className=" p-2   relative overflow-hidden">
-      <div className="p-6 absolute top-30  left-20  rounded-lg shadow-lg  text-center space-y-3 leading-relaxed text-4xl font-bold text-gray-800">
-        <span ref={el} />
-      </div>
-      <Link
-        to={"/about"}
-        className="bg-blue-500 hover:bg-blue-700  hover:text-white cursor-pointer absolute z-50 top-[70%] w-[150px] h-[45px] text-center flex justify-center items-center rounded-2xl text-xl font-semibold font-serif text-gray-800 left-35 mt50"
-      >
-        About me
-      </Link>
 
-      <div className="h-[100vh]  absolute right-10  top-[-100px]  w-[40%]">
-        <img className="object-contain " src={bgi} alt="" />
+    const typed = new Typed(el.current, options);
+    return () => typed.destroy();
+  }, []);
+
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100 p-4">
+      {/* Text & Button */}
+      <div className="md:w-1/2 text-center md:text-left space-y-4">
+        <div
+          ref={el}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-snug"
+        />
+        <Link
+          to="/about"
+          className="inline-block mt-2 px-6 py-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg transition"
+        >
+          About Me
+        </Link>
+      </div>
+
+      {/* Image */}
+      <div className="md:w-1/2 mt-6 md:mt-0 flex justify-center">
+        <img
+          src={bgi}
+          alt="Background"
+          className="w-full max-w-sm sm:max-w-md md:max-w-lg object-contain"
+        />
       </div>
     </div>
   );
