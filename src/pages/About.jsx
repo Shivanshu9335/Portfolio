@@ -3,6 +3,24 @@ import { IoIosArrowForward } from "react-icons/io";
 import image from "../assets/porfolioImage.jpg";
 
 const About = () => {
+  const details = [
+    { label: "Birthday", value: "22 Jan 2008" },
+    { label: "Age", value: "18" },
+    { label: "Website", value: "www.example.com" },
+    { label: "Degree", value: "B.Sc. Computer Science" },
+    { label: "Phone", value: "+91 9335103237" },
+    { label: "Email", value: "shivanshuji50@gmail.com" },
+    { label: "Freelance", value: "Available" },
+    { label: "City", value: "Lucknow" },
+  ];
+
+  const skills = [
+    { skill: "HTML", pct: 100 },
+    { skill: "CSS", pct: 90 },
+    { skill: "JavaScript", pct: 70 },
+    { skill: "React", pct: 90 },
+  ];
+
   return (
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       {/* Section Title */}
@@ -32,16 +50,7 @@ const About = () => {
           <h2 className="text-2xl font-bold text-gray-800">Web Developer</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { label: "Birthday", value: "22 Jan 2008" },
-              { label: "Age", value: "18" },
-              { label: "Website", value: "www.example.com" },
-              { label: "Degree", value: "B.Sc. Computer Science" },
-              { label: "Phone", value: "+91 9335103237" },
-              { label: "Email", value: "shivanshuji50@gmail.com" },
-              { label: "Freelance", value: "Available" },
-              { label: "City", value: "Lucknow" },
-            ].map((item) => (
+            {details.map((item) => (
               <div key={item.label} className="flex items-start">
                 <IoIosArrowForward className="mt-1 text-blue-500" />
                 <div className="ml-2">
@@ -71,12 +80,7 @@ const About = () => {
           Skills
         </h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {[
-            { skill: "HTML", pct: 100 },
-            { skill: "CSS", pct: 90 },
-            { skill: "JavaScript", pct: 70 },
-            { skill: "React", pct: 90 },
-          ].map((item) => (
+          {skills.map((item) => (
             <div key={item.skill} className="space-y-2">
               <div className="flex justify-between">
                 <span className="text-gray-700 font-medium">{item.skill}</span>
