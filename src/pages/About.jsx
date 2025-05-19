@@ -6,8 +6,8 @@ const About = () => {
   const details = [
     { label: "Birthday", value: "22 Jan 2008" },
     { label: "Age", value: "18" },
-    { label: "Website", value: "www.example.com" },
-    { label: "Degree", value: "B.Sc. Computer Science" },
+    { label: "Website", value: ".........." },
+    { label: "Degree", value: "12th only" },
     { label: "Phone", value: "+91 9335103237" },
     { label: "Email", value: "shivanshuji50@gmail.com" },
     { label: "Freelance", value: "Available" },
