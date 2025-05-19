@@ -29,7 +29,7 @@ const About = () => {
           About
         </h1>
         <p className="mt-4 text-lg text-gray-700">
-          I'm a Web Developer passionate about crafting clean, responsive, and
+          I'm a Frontend Developer passionate about crafting clean, responsive, and
           user-friendly web experiences.
         </p>
       </div>
