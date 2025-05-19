@@ -64,7 +64,7 @@ const About = () => {
           </div>
 
           <p className="text-gray-700 leading-relaxed">
-            I’m a passionate Web Developer with a focus on creating responsive,
+            I’m a passionate Frontend Developer with a focus on creating responsive,
             user-friendly websites. I specialize in HTML, CSS, JavaScript, and
             modern frameworks like React. I love building websites that not only
             look great but also work smoothly on all devices. I'm always
